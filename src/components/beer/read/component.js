@@ -32,9 +32,9 @@ class Read extends Component {
       let BeerList = this.state.beerTokenReducer.map((beer) => {
         return (
           <li key={beer.id}>
-             Name: {beer.name}
-             Type : {beer.type}
-             Abv% : {beer.abv}
+             Name: {beer.name} {" "}
+             Type : {beer.type} {" "}
+             Abv% : {beer.abv} {" "}
              season : {beer.season}
             <Link to={'/beers/' + beer.id }> Edit </Link>
             <DeleteBeer id = {beer.id}/>
@@ -44,8 +44,7 @@ class Read extends Component {
       });
       return (
         <div> 
-          <div>
-            <h1>Add a Beer</h1>
+          <div>      
             <Createbeer />
           </div>
           {BeerList}

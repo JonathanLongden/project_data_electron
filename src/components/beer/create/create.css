@@ -1,0 +1,36 @@
+.container {
+    width: 80%;
+    height: 250px;
+    background: aqua;
+    margin: auto;
+    padding: 10px;
+}
+.one {
+    width: 20%;
+    height: 250px;
+    background: red;
+    float: left;
+}
+.two {
+    margin-left: 15%;
+    height: 250px;
+    background: black;
+}
+
+.Submit{
+    margin: auto;
+    width: 30%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    color: aliceblue;
+    background-color: #d6a844;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    
+}

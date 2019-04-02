@@ -1,23 +1,24 @@
 import CreatePage from "./component"; //from inside component js file.
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import { addBeer } from '../../../actions/beers';
 
 
 
 const mapStateToProps = (state, props) => {
-	// let userInfoReducer = state.userInfoReducer;
-	// let accessTokenReducer = state.accessTokenReducer;
+	// console.log(state);
+	// console.log(props);
+	let beerTokenReducer = state.beerTokenReducer;
 	return {
-		// accessTokenReducer : accessTokenReducer ? accessTokenReducer : "",
-		// history: props.history ? props.history  :  null,
-		// setDeviceId : setDeviceId ? setDeviceId : null,
-		// userInfoReducer : userInfoReducer ? userInfoReducer : ""
+		beerTokenReducer : beerTokenReducer ? beerTokenReducer[0] : [],
+		addBeer : addBeer ? addBeer : null
 	};
 
 };
 
 const mapDispatchToProps = (dispatch) => {
 	return bindActionCreators({
+		addBeer
 	}, dispatch);
 
   };
