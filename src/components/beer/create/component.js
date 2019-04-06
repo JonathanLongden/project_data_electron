@@ -21,10 +21,8 @@ class Create extends Component {
         beerTokenReducer : props.beerTokenReducer,
         keys: Object.keys(props.beerTokenReducer),
         addBeer: props.addBeer,
-        obj: CreateObject(Object.keys(props.beerTokenReducer))
-       
+        obj: CreateObject(Object.keys(props.beerTokenReducer))  
       }
-     
   }
 
   componentDidMount() {

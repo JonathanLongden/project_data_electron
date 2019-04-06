@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {withRouter} from "react-router-dom";
 import PropTypes from 'prop-types';
+import './delete.css'
 
 
 
@@ -37,9 +38,7 @@ class Delete extends Component {
     render() {
       //https://reactjs.org/docs/handling-events.html
       return (
-        <div> 
-          <button onClick={(e) => this.delete(e, this.state.id, this.state.deleteBeer) }> Delete Beer</button>
-        </div>
+          <button className = "delete" onClick={(e) => this.delete(e, this.state.id, this.state.deleteBeer) }> Delete Beer</button>
       );
     }
   }

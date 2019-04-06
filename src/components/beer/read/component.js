@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import {withRouter} from "react-router-dom";
 import PropTypes from 'prop-types';
 import DeleteBeer from '../delete/index';
-import Createbeer from '../create/index';
-
+import CreateBeer from '../create/index';
+import UpdateBeer from '../update/index';
+import './read.css';
 
 
 
@@ -31,23 +31,31 @@ class Read extends Component {
     render() {
       let BeerList = this.state.beerTokenReducer.map((beer) => {
         return (
-          <li key={beer.id}>
+          <div className="feed" key={beer.id}>
              Name: {beer.name} {" "}
+             <br/>
              Type : {beer.type} {" "}
+             <br/>
              Abv% : {beer.abv} {" "}
+             <br/>
              season : {beer.season}
-            <Link to={'/beers/' + beer.id }> Edit </Link>
-            <DeleteBeer id = {beer.id}/>
-          </li>
+             <br/>
+             <DeleteBeer id = {beer.id}/>
+            
+            <br/>
+            <UpdateBeer obj = {beer} />
+          </div>
         )
   
       });
       return (
         <div> 
           <div>      
-            <Createbeer />
+            <CreateBeer />
           </div>
-          {BeerList}
+          <div className="flex-container">
+            {BeerList}
+          </div>
         </div>
       );
     }
